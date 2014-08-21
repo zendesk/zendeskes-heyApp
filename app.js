@@ -37,7 +37,7 @@
     },
 
     doPopMessage: function(body) {
-      this.$('.message').text(body);
+      services.notify(body, 'notice');
     }
 
   };
