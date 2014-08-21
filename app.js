@@ -30,14 +30,14 @@
     checkUrgent: function() {
       var ticket = this.ticket();
       if (ticket.priority() == "urgent") {
-        var data = "the ticket #" + ticket.id() + " has been marked as urgent priority and needs attention";
+        var data = 'the ticket </a href="#' + ticket.id() + '"/>#'+ ticket.id() +'</a> has been marked as urgent priority and needs attention';
         this.ajax("notifyAll", data);
         return true;
       }
     },
 
     doPopMessage: function(body) {
-      services.notify(body, 'notice');
+      services.notify(body, 'error');
     }
 
   };
